@@ -1,0 +1,23 @@
+$(document).ready(function(){
+$("a.contact").click(function(){
+    window.scrollTo(0,2190)
+});
+$("a.home").click(function(){
+    window.scrollTo(0,0)
+});
+});
+var scrollIcon=document.querySelector(".toTop");
+window.onscroll=function(){
+    if(window.pageYOffset>80){
+    scrollIcon.style.display="block";
+    }
+    else{
+        scrollIcon.style.display="none";
+    }
+}
+scrollIcon.onclick=function(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+}

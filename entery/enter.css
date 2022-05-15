@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "cairo",sans-serif;
+    background-color: #FACA72;
+}
+.container--{
+    height: 100vh;
+}
+.container--::before {
+    content: '';
+    position: fixed;
+    width: 200%;
+    height: 100%;
+    background: #b5b4b9;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) skew(0deg,-10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 6s ease-in-out infinite alternate;
+}
+@keyframes waving {
+    from{
+        transform: translateX(-50%) skew(0,-10deg);
+    }
+    to{
+        transform: translateX(-30%) skew(10deg,0);
+    }
+}
+div.egy{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #232327;
+}
+div.egy span{
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 50%;
+    letter-spacing: 1px;
+    z-index: 1;
+    mix-blend-mode: difference;
+    font-family: sans-serif;
+}
+div.egy::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -19px;
+    width: 180px;
+    height: 69px;
+    background-color:#FACA72;
+    animation: move 4s linear infinite;
+    z-index: -1;
+}
+@keyframes move {
+    0% ,100%{
+left: 0px;
+    }
+    50%{
+left: calc(100% - 100px);
+    }
+    
+}
+a{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: sans-serif;
+    color: #232327;
+}
+a:hover{
+    color: #232327;
+}

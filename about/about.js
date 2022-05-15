@@ -1,0 +1,26 @@
+$(document).ready(function(){
+$(".country-link").click(function(){
+window.scrollTo(0,196)
+});
+$(".people-link").click(function(){
+    window.scrollTo(0,1000)
+    });
+    $(".culture-link").click(function(){
+        window.scrollTo(0,1643)
+    });
+});
+var scrollIcon=document.querySelector(".toTop");
+window.onscroll=function(){
+    if(window.pageYOffset>100){
+    scrollIcon.style.display="block";
+    }
+    else{
+        scrollIcon.style.display="none";
+    }
+}
+scrollIcon.onclick=function(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+}
